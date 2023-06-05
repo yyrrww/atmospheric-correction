@@ -22,10 +22,9 @@ def ac_6s(uaot,solz,viewz,alt,band,wv,O3,raa):
   
     s.atmos_profile = AtmosProfile.UserWaterAndOzone(wv,O3)
     s.aero_profile = AeroProfile.PredefinedType(AeroProfile.Continental)
-    s.atmos_profile = AtmosProfile.PredefinedType(AtmosProfile.MidlatitudeSummer)
     s.aot550 = uaot 
     s.altitudes.set_sensor_satellite_level()
-    s.altitudes.set_target_custom_altitude(-alt)
+    s.altitudes.set_target_custom_altitude(alt)
    
     if band==1:
         s.wavelength = Wavelength(0.405,0.57,[0.00122100,0.00245400,0.00411300,0.00620050,0.00847300, 0.0108225
